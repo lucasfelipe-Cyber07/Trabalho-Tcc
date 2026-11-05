@@ -14,13 +14,11 @@ header{
    width: 100%;
 
 }
-.cabeçalho{
-    display:flex
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #333;
 
+:root {
+  --roxo: #a855f7;
+  --rosa: #d946ef;
+  --lilas: #e9d5ff;
 }
 
 .menu {
@@ -39,45 +37,20 @@ header{
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-.menu ul {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-.menu a {
- color: black;
- font-size: 15px;
- font-weight: 600;
- text-decoration: none;
- transition: 0.3s;
- display: inline-block;
-}
-
-.menu a:hover {
-color: #d58aff;
-}
-
-
-.logo{
-    width: 100%;
-   font-size: 26px;
+/* Logo (se usar imagem: <a class="logo"><img src="logo.png" alt="Patmovel"></a>) */
+.logo {
+  font-size: 26px;
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.5px;
   text-decoration: none;
   color: #fff;
+  margin-right: clamp(48px, 7vw, 104px); /* espaço entre o logo e os links */
 }
+.logo span { color: var(--roxo); }
+.logo img { height: 44px; display: block; }
 
-.logo span { color: var(--roxo);
- }
-
-.logo img { height: 44px; display: block;
-}
-
-
+/* Links */
 .links {
   display: flex;
   align-items: center;
@@ -85,10 +58,11 @@ color: #d58aff;
   gap: 36px;
   list-style: none;
   margin: 0;
-  padding: 0;}
-
+  padding: 0;
+}
 
 .links a {
+  white-space: nowrap;
   position: relative;
   padding: 8px 0;
   color: #fff;
@@ -98,6 +72,7 @@ color: #d58aff;
   transition: color .25s, text-shadow .25s;
 }
 
+/* linha neon no hover e na página atual */
 .links a:not(.btn)::after {
   content: "";
   position: absolute;
@@ -117,12 +92,42 @@ color: #d58aff;
 .links a:not(.btn):hover::after,
 .links a.ativo::after { width: 100%; }
 
-.links a:focus-visible,
-.hamburguer:focus-visible {
+.links a:focus-visible {
   outline: 2px solid var(--rosa);
   outline-offset: 4px;
   border-radius: 4px;
 }
+
+/* Botão "Alugue agora" */
+.links .btn {
+  padding: 11px 24px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--roxo), var(--rosa));
+  box-shadow: 0 0 18px rgba(217, 70, 239, .45);
+  transition: transform .2s, box-shadow .2s;
+}
+.links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 26px rgba(217, 70, 239, .75);
+}
+
+.logo{
+    width: 100%;
+   font-size: 26px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span { color: var(--roxo);
+ }
+
+.logo img { height: 44px; display: block;
+}
+
+
 
 .titulo {
     color: black;

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Patmovel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <!-- MENU (igual ao da página inicial) -->
+  <header class="topo">
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#localizacao">Localização</a>
+      <a href="index.html#beneficios">Benefícios</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="contato.html" class="ativo" aria-current="page">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- TÍTULO -->
+    <section class="intro">
+      <h1>Fale com a <span class="marca">Pat<strong>movel</strong></span></h1>
+      <p>Dúvidas sobre aluguel, preços ou onde encontrar um patinete? Envie sua mensagem e respondemos o mais rápido possível.</p>
+    </section>
+
+    <section class="conteudo">
+
+      <!-- FORMULÁRIO -->
+      <form class="formulario" action="mailto:contato@patmovel.com.br" method="post" enctype="text/plain">
+        <h2>Envie uma mensagem</h2>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <div class="linha">
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+          </div>
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000">
+          </div>
+        </div>
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto" required>
+          <option value="" disabled selected>Escolha um assunto</option>
+          <option>Dúvida sobre aluguel</option>
+          <option>Preços e planos</option>
+          <option>Problema com um patinete</option>
+          <option>Sugestão</option>
+          <option>Outro</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui sua mensagem" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <!-- INFORMAÇÕES DE CONTATO -->
+      <aside class="info">
+        <h2>Outros canais</h2>
+
+        <div class="card">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/5511900000000">(11) 90000-0000</a></p>
+        </div>
+
+        <div class="card">
+          <h3>E-mail</h3>
+          <p><a href="mailto:contato@patmovel.com.br">contato@patmovel.com.br</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Atendimento</h3>
+          <p>Segunda a sexta, das 8h às 18h<br>Sábado, das 9h às 13h</p>
+        </div>
+
+        <div class="card">
+          <h3>SIga nós no Instagram</h3>
+          <p>
+            <a href="https://www.instagram.com/patmovel" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+            
+          </p>
+        </div>
+        <div class="card">
+          <h3>Endereço</h3>
+          <p>Rua Exemplo, 123<br>Jardim São Jorge, São Paulo/SP</p>
+        </div>
+
+        
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Patmovel. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

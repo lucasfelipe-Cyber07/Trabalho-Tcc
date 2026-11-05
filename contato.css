@@ -1,0 +1,240 @@
+/* ===== Cores do tema Patmovel ===== */
+:root {
+  --fundo: #0d0620;          /* azul-noite quase roxo */
+  --fundo-card: #1a0b3b;     /* roxo escuro dos cartões */
+  --roxo-menu: #6a1b9a;      /* roxo do menu */
+  --roxo-neon: #b44cff;      /* brilho neon */
+  --lilas: #d9a8ff;
+  --texto: #f3e9ff;
+  --texto-suave: #bfa8de;
+  --borda: #3d2270;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(180, 76, 255, 0.25), transparent 45%),
+    var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--lilas);
+}
+
+/* ===== Menu ===== */
+.topo {
+  background: var(--roxo-menu);
+  box-shadow: 0 2px 14px rgba(180, 76, 255, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 16px 32px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  border-bottom-color: #fff;
+}
+
+/* ===== Título ===== */
+.intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 24px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+/* Nome da marca no estilo do logo: itálico, "Pat" lilás e "movel" branco */
+.marca {
+  font-style: italic;
+  color: var(--roxo-neon);
+  text-shadow: 0 0 18px rgba(180, 76, 255, 0.8);
+}
+
+.marca strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.intro p {
+  color: var(--texto-suave);
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+/* ===== Área principal: formulário + informações ===== */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* ===== Formulário ===== */
+.formulario {
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 0 28px rgba(180, 76, 255, 0.25);
+}
+
+.formulario label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 16px 0 6px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: #7d6a9e;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--roxo-neon);
+  box-shadow: 0 0 0 3px rgba(180, 76, 255, 0.35);
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formulario button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, var(--roxo-menu), var(--roxo-neon));
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(180, 76, 255, 0.6);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.formulario button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(180, 76, 255, 0.9);
+}
+
+.formulario button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* ===== Informações de contato ===== */
+.card {
+  background: var(--fundo-card);
+  border-left: 4px solid var(--roxo-neon);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  text-align: center;
+  padding: 24px;
+  background: var(--roxo-menu);
+  font-size: 0.9rem;
+}
+
+/* ===== Celular e tablet ===== */
+@media (max-width: 800px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    gap: 16px;
+    padding: 14px 16px;
+  }
+
+  .linha {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .formulario {
+    padding: 22px;
+  }
+}
