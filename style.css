@@ -1,0 +1,162 @@
+
+
+
+body {
+    
+font-family: "Montserrat", sans-serif;
+background: #f8f7fb;
+color : #25202c;
+line-height: 1.6;
+}
+
+
+header{
+   width: 100%;
+
+}
+.cabeçalho{
+    display:flex
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 72px;
+  padding: 0 clamp(20px, 5vw, 56px);
+  background: rgba(20, 5, 45, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 4px 24px rgba(168, 85, 247, 0.25);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu a {
+ color: black;
+ font-size: 15px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: 0.3s;
+ display: inline-block;
+}
+
+.menu a:hover {
+color: #d58aff;
+}
+
+
+.logo{
+    width: 100%;
+   font-size: 26px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span { color: var(--roxo);
+ }
+
+.logo img { height: 44px; display: block;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;}
+
+
+.links a {
+  position: relative;
+  padding: 8px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .25s, text-shadow .25s;
+}
+
+.links a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--roxo), var(--rosa));
+  box-shadow: 0 0 8px var(--rosa);
+  transition: width .25s;
+}
+.links a:not(.btn):hover,
+.links a.ativo {
+  color: var(--lilas);
+  text-shadow: 0 0 10px rgba(217, 70, 239, .7);
+}
+.links a:not(.btn):hover::after,
+.links a.ativo::after { width: 100%; }
+
+.links a:focus-visible,
+.hamburguer:focus-visible {
+  outline: 2px solid var(--rosa);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.titulo {
+    color: black;
+    font-size: 24px;
+    margin: 0;  
+}
+    
+
+.principal {
+    font-size: 20px;
+    padding: 3em 0;
+    
+}
+
+
+.principal p{
+    margin: 0 0 1em;
+    font-size: 27px;
+}
+
+.missao {
+    font-size: 27px;
+    padding: 3em 0;
+   
+   
+}
+
+
+
+
+
+footer {
+    background: linear-gradient(90deg, #4b0082, #7b2cbf, #9d4edd);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 17px;
+}

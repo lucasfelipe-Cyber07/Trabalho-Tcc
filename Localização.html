@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Localização | Patmovel</title>
+ 
+  <!-- Fonte do site (Exo 2), baixada do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,700;1,800&display=swap" rel="stylesheet">
+ 
+  <!-- Liga o arquivo de estilo (cores, tamanhos, posição) -->
+  <link rel="stylesheet" href="localizacao.css">
+</head>
+<body>
+ 
+  <!-- MENU DO SITE -->
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="localizacao.html" class="ativo">Localização</a>
+      <a href="index.html#beneficios">Benefícios</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
+ 
+  <main>
+    <h1>Encontre uma Patmovel perto de você</h1>
+    <p>Clique em um local para ver no mapa.</p>
+ 
+    <div class="conteudo">
+ 
+      <!-- LISTA DE LOCAIS -->
+      <!-- Para trocar um local: mude o nome, o endereço e o horário.
+           Para adicionar outro: copie um bloco <button> inteiro.
+           Atenção: o endereço aparece duas vezes (dentro do onclick e no <p>). Troque nos dois. -->
+      <div class="lista">
+ 
+        <button onclick="mostrarMapa('Av. Paulista, 1578, São Paulo')">
+          <h2>Av. Paulista</h2>
+          <p>Av. Paulista, 1578, São Paulo</p>
+          <small>Todos os dias, 8h às 22h</small>
+        </button>
+ 
+        <button onclick="mostrarMapa('Parque Ibirapuera, São Paulo')">
+          <h2>Parque Ibirapuera</h2>
+          <p>Parque Ibirapuera, São Paulo</p>
+          <small>Todos os dias, 6h às 20h</small>
+        </button>
+ 
+        <button onclick="mostrarMapa('Rua Fradique Coutinho, 900, São Paulo')">
+          <h2>Vila Madalena</h2>
+          <p>Rua Fradique Coutinho, 900, São Paulo</p>
+          <small>Segunda a sábado, 9h às 21h</small>
+        </button>
+ 
+      </div>
+ 
+      <!-- MAPA -->
+      <div class="mapa">
+        <iframe id="mapa" title="Mapa"
+          src="https://www.google.com/maps?q=Av.+Paulista,+1578,+São+Paulo&output=embed"></iframe>
+ 
+        <a id="rota" class="botao" target="_blank"
+          href="https://www.google.com/maps/dir/?api=1&destination=Av.+Paulista,+1578,+São+Paulo">
+          Como chegar
+        </a>
+      </div>
+ 
+    </div>
+  </main>
+ 
+  <script>
+    // Esta função roda quando você clica em um local da lista.
+    // Ela troca o mapa e o botão "Como chegar" para o endereço escolhido.
+    function mostrarMapa(endereco) {
+      var endereco = encodeURIComponent(endereco); // deixa o endereço pronto para usar em link
+ 
+      document.getElementById("mapa").src =
+        "https://www.google.com/maps?q=" + endereco + "&output=embed";
+ 
+      document.getElementById("rota").href =
+        "https://www.google.com/maps/dir/?api=1&destination=" + endereco;
+    }
+  </script>
+ 
+</body>
+</html>
+ 
