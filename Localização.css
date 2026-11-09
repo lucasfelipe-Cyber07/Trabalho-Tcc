@@ -6,7 +6,7 @@
 }
  
 body {
-  font-family: "Exo 2", Arial, sans-serif;  
+  font-family: "Montserrat", Arial, sans-serif;  
   background-color: #1a0536;   
   color: white;
 }
@@ -14,9 +14,12 @@ body {
 
 header {
   background-color: #6a1bb1;   
-  padding: 15px;
+  padding: 35px;
 }
- 
+.tit
+
+
+
 nav {
   display: flex;
   gap: 25px;
